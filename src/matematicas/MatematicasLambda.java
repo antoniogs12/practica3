@@ -1,18 +1,32 @@
-import java.util.Random;
+import java.util.stream.IntStream;
 
 public class MatematicasLambda {
     public static double generarNumeroPiLambda(long pasos) {
-        Random random = new Random();
-        long aciertos = 0;
-
-        for (long i = 0; i < pasos; i++) {
-            double x = random.nextDouble();
-            double y = random.nextDouble();
-            if (x * x + y * y <= 1) {
-                aciertos++;
-            }
-        }
-
+        long aciertos = IntStream.range(0, (int) pasos)
+            .parallel()
+            .filter(i -> {
+                double x = Math.random();
+                double y = Math.random();
+                return Math.pow(x, 2) + Math.pow(y, 2) <= 1;
+            })
+            .count();
         return 4.0 * aciertos / pasos;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
