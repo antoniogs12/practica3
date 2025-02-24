@@ -31,7 +31,3 @@ Esta práctica tiene como objetivo implementar un programa en Java que utilice e
 ## Autor
 
 - Antonio Garcia Subiela
-
----
-
-¡Espero que esto te sea útil! Si tienes alguna pregunta o necesitas más ayuda, no dudes en preguntar.
